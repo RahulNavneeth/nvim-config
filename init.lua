@@ -10,6 +10,7 @@ api.nvim_set_keymap('v','<TAB>','<ESC>',{noremap = true})
 api.nvim_set_keymap('i','<ESC>','<TAB>',{noremap = true})
 api.nvim_set_keymap('n','vv','<C-v>',{noremap = true})
 
+
 vim.cmd([[
  
   set nrformats+=alpha
@@ -25,9 +26,12 @@ vim.cmd([[
   let g:airline_theme='transparent'
 
   let g:fern#renderer = "devicons"
-
   nnoremap nn :NERDTreeToggle<CR>
   tnoremap <TAB> <C-\><C-n>
+
+
+ :command Cpp :read !head -1000 ~/projects/cpp/template.cpp
+ :command Html :!open % -a Brave\ Browser
 
   command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
   vmap <leader>f  <Plug>(coc-format-selected)
@@ -56,6 +60,7 @@ vim.cmd([[
       autocmd!
       autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
     augroup END
+  set statusline=
 ]])
 
 cmd("syntax on")

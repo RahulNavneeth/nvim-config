@@ -20,7 +20,6 @@ return packer.startup {
 		use 'airblade/vim-gitgutter'
 		use 'neoclide/coc-git'
 		use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-		use 'davidhalter/jedi-vim'
 		use 'jackguo380/vim-lsp-cxx-highlight'
 		use 'prabirshrestha/vim-lsp'
 		use 'MaskRay/ccls'
