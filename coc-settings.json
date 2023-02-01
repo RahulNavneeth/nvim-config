@@ -2,5 +2,6 @@
   "clangd.fallbackFlags": [
     "-std=c++11"
   ],
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "svelte.enable-ts-plugin": true
 },
