@@ -211,9 +211,9 @@ local components = {
 		right,
 	},
 	inactive = {
-		left,
-		middle,
-		right,
+		-- left,
+		-- middle,
+		-- right,
 	},
 }
 

@@ -102,7 +102,7 @@ local mappings = {
         { "<C-SPACE>", 'coc#refresh()', { expr = true } },
         {'<C-F>', 'coc#float#has_scroll() ? coc#float#scroll(1) : "<Right>"', { expr = true, silent = true, nowait = true }},
         {'<C-B>', 'coc#float#has_scroll() ? coc#float#scroll(0) : "<Left>"', { expr = true, silent = true, nowait = true }},
-       {'<CR>',  'v:lua.MPairs.completion_confirm()', {expr = true, noremap = true}}
+       -- {'<CR>',  'v:lua.MPairs.completion_confirm()', {expr = true, noremap = true}}
 	},
 	n = { -- Normal mode
         { "K", '<CMD>lua _G.show_docs()<CR>', { silent = true } },

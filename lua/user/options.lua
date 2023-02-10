@@ -2,7 +2,7 @@ local options = {
 
 	backup = false,
 	clipboard = "unnamedplus",
-	cmdheight = 2,
+	cmdheight = 1,
 	completeopt = { "menuone" , "noselect" },
 	conceallevel = 0,
 	fileencoding = "utf-8",
@@ -11,7 +11,7 @@ local options = {
 	mouse = "a",
 	pumheight = 10,
 	showmode = false,
-	showtabline = 2,
+	showtabline = 0,
 	smartcase = true,
 	smartindent = true,
 	splitbelow = true,
