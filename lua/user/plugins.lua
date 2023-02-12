@@ -24,6 +24,7 @@ return packer.startup {
 			'williamboman/mason-lspconfig.nvim',
 			'neovim/nvim-lspconfig',
 		}
+		use 'simrat39/rust-tools.nvim'
 		use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 		use 'ap/vim-css-color'
 		use {

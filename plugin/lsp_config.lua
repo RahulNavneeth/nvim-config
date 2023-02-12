@@ -8,9 +8,9 @@ require("mason").setup({
             }
       }
 })
-require("mason-lspconfig").setup({
-      ensure_installed = {"sumneko_lua"}
-})
+-- require("mason-lspconfig").setup({
+--       ensure_installed = {"lua_ls"}
+-- })
 
 local on_attach = function(_, _)
       vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
@@ -22,6 +22,27 @@ local on_attach = function(_, _)
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
-require('lspconfig').sumneko_lua.setup {
-      on_attach = on_attach
+local lspconfig = require('lspconfig')
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  settings = {
+    gopls = {
+      gofumpt = true,
+    },
+  },
+  flags = {
+    debounce_text_changes = 150,
+  },
 }
+
+-- lspconfig.sumneko_lua.setup {
+--   on_attach = on_attach,
+-- }
+
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  cmd = {
+    "rustup", "run", "stable", "rust-analyzer",
+  }
+}
+require'lspconfig'.svelte.setup { filetypes = { "svelte", "html" } }

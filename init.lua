@@ -1,5 +1,4 @@
 local api = vim.api
-local g = vim.g
 local cmd = vim.cmd
 
 api.nvim_set_keymap('i','<TAB>','<ESC>',{noremap = true})
@@ -7,8 +6,8 @@ api.nvim_set_keymap('v','<ESC>','<TAB>',{noremap = true})
 api.nvim_set_keymap('v','<TAB>','<ESC>',{noremap = true})
 api.nvim_set_keymap('i','<ESC>','<TAB>',{noremap = true})
 api.nvim_set_keymap('n','vv','<C-v>',{noremap = true})
-api.nvim_set_keymap('n','OO',':bn<CR>',{noremap = true})
-api.nvim_set_keymap('n','PP',':bp<CR>',{noremap = true})
+api.nvim_set_keymap('n','PP',':bn<CR>',{noremap = true})
+api.nvim_set_keymap('n','OO',':bp<CR>',{noremap = true})
 
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(
@@ -33,6 +32,13 @@ vim.cmd [[nnoremap <buffer><silent> [g :lua vim.lsp.diagnostic.goto_prev({ popup
 vim.cmd[[set showtabline=0 ]]
 
 vim.cmd([[
+augroup clearcmdline
+    autocmd!
+    function! Echo_Nothing(timer)
+        echo ''
+    endfunction
+    autocmd CmdlineLeave * call timer_start(1000, 'Echo_Nothing')
+augroup END
 vnoremap SS :Ray<CR>
 function! CreateCenteredFloatingWindow()
     let width = min([&columns - 4, max([80, &columns - 20])])
