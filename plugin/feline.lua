@@ -146,6 +146,7 @@ local c = { vim_mode = {
 			bg = "#8f96a0",
 			style = "bold",
 		},
+				name = "NeovimModeHLColor",
 		left_sep = "block",
 		right_sep = "block",
 	},

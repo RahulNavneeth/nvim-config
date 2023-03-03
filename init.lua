@@ -8,6 +8,7 @@ api.nvim_set_keymap('i','<ESC>','<TAB>',{noremap = true})
 api.nvim_set_keymap('n','vv','<C-v>',{noremap = true})
 api.nvim_set_keymap('n','PP',':bn<CR>',{noremap = true})
 api.nvim_set_keymap('n','OO',':bp<CR>',{noremap = true})
+api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(
@@ -32,6 +33,10 @@ vim.cmd [[nnoremap <buffer><silent> [g :lua vim.lsp.diagnostic.goto_prev({ popup
 vim.cmd[[set showtabline=0 ]]
 
 vim.cmd([[
+
+imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 augroup clearcmdline
     autocmd!
     function! Echo_Nothing(timer)
