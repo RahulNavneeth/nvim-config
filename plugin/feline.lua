@@ -137,13 +137,13 @@ local c = { vim_mode = {
 		provider = {
 			name = "file_type",
 			opts = {
-				filetype_icon = false,
+				filetype_icon = true,
 				case = "titlecase",
 			},
 		},
 		hl = {
-			fg = "darkblue",
-			bg = "#8f96a0",
+			fg = "#8f96a0",
+			bg = "#0c0e18",
 			style = "bold",
 		},
 				name = "NeovimModeHLColor",
@@ -208,7 +208,7 @@ local right = {
 local components = {
 	active = {
 		left,
-		middle,
+		-- middle,
 		right,
 	},
 	inactive = {

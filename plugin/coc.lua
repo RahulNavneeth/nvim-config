@@ -3,12 +3,6 @@ local api = vim.api
 local cmd = api.nvim_command
 local fn = vim.fn
 
--- Add (Neo)Vim's native statusline support.
--- NOTE: Please see `:h coc-status` for integrations with external plugins that
--- provide custom statusline: lightline.vim, vim-airline.
--- === Airline is natively supported ===
--- o.statusline = o.statusline .. [[ %{coc#status()}%{get(b:,'coc_current_function','')} ]]
-
 local function register_mappings(mappings, default_options)
 	for mode, mode_mappings in pairs(mappings) do
 		for _, mapping in pairs(mode_mappings) do
@@ -20,10 +14,7 @@ local function register_mappings(mappings, default_options)
 end
 
 g.coc_global_extensions = {
-   -- 'coc-clang++',
-   -- 'coc-clangd',
    'coc-css',
-   -- 'coc-ccls',
    'coc-cssmodules',
    'coc-diagnostic',
    'coc-dictionary',
@@ -68,7 +59,6 @@ g.coc_global_extensions = {
    'coc-yaml',
    'coc-yank',
    'coc-lists',
-    -- 'coc-rust-analyzer'
 }
 
 function _G.check_back_space()
@@ -96,15 +86,13 @@ local opts = {silent = true, noremap = true, expr = true, replace_keycodes = fal
 keyset("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 local mappings = {
-	i = { -- Insert mode
-        -- { "<TAB>", 'pumvisible() ? "<C-N>" : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', { expr = true } },
+	i = { 
         { "<S-TAB>", 'pumvisible() ? "<C-P>" : "<C-H>"', { expr = true } },
         { "<C-SPACE>", 'coc#refresh()', { expr = true } },
         {'<C-F>', 'coc#float#has_scroll() ? coc#float#scroll(1) : "<Right>"', { expr = true, silent = true, nowait = true }},
         {'<C-B>', 'coc#float#has_scroll() ? coc#float#scroll(0) : "<Left>"', { expr = true, silent = true, nowait = true }},
-       -- {'<CR>',  'v:lua.MPairs.completion_confirm()', {expr = true, noremap = true}}
 	},
-	n = { -- Normal mode
+	n = {
         { "K", '<CMD>lua _G.show_docs()<CR>', { silent = true } },
         {'[g', '<Plug>(coc-diagnostic-prev)', { noremap = false }},
         {']g', '<Plug>(coc-diagnostic-next)', { noremap = false }},
@@ -119,11 +107,11 @@ local mappings = {
 
 	},
     o = {},
-	t = { -- Terminal mode
+	t = {
 	},
-	v = { -- Visual/Select mode
+	v = {
 	},
-	x = { -- Visual mode
+	x = {
     { "<leader>a", '<CMD>lua _G.show_docs()<CR>', { silent = true } },
 	},
 	[""] = {
@@ -138,12 +126,6 @@ vim.cmd([[
     " Add `:OR` command for organize imports of the current buffer.
     command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 ]])
-
--- require('utils').define_augroups({_coc = {
---     {'filetype', 'typescript,json', 'setl', "formatexpr=CocAction('formatselected')"},
---     {'User', 'CocQuickfixChange', ':CocList', '--normal', 'quickfix'},
---     {  'user','cocjumpplaceholder','call',"CocActionAsync('showSignatureHelp')"},
--- }})
 
 
 register_mappings(mappings, { silent = true, noremap = true })

@@ -86,6 +86,11 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["coc-git"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/coc-git",
@@ -121,11 +126,6 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/feline.nvim",
     url = "https://github.com/feline-nvim/feline.nvim"
   },
-  ["fine-cmdline.nvim"] = {
-    loaded = true,
-    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
-    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
-  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -136,10 +136,20 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["hologram.nvim"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/hologram.nvim",
     url = "https://github.com/edluffy/hologram.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["magma-nvim"] = {
     loaded = true,
@@ -161,11 +171,6 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -181,11 +186,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/nvim-terminal",
     url = "https://github.com/s1n7ax/nvim-terminal"
-  },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -232,6 +232,11 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  ["tabby.nvim"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/tabby.nvim",
+    url = "https://github.com/nanozuki/tabby.nvim"
+  },
   tagbar = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/tagbar",
@@ -247,6 +252,11 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-css-color"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-css-color",
@@ -257,6 +267,16 @@ _G.packer_plugins = {
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-grammarous"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-grammarous",
+    url = "https://github.com/rhysd/vim-grammarous"
+  },
+  ["vim-import-cost"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-import-cost",
+    url = "https://github.com/yardnsm/vim-import-cost"
+  },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-polyglot",
@@ -266,6 +286,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-prisma"] = {
+    loaded = true,
+    path = "/Users/rahulnavneeth/.local/share/nvim/site/pack/packer/start/vim-prisma",
+    url = "https://github.com/prisma/vim-prisma"
   },
   ["vim-ray-so-beautiful"] = {
     loaded = true,
@@ -286,18 +311,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: wpm.nvim
-time([[Config for wpm.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\bwpm\frequire\0", "config", "wpm.nvim")
-time([[Config for wpm.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\na\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\27alpha.themes.dashboard\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\na\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\27alpha.themes.dashboard\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
+-- Config for: wpm.nvim
+time([[Config for wpm.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\bwpm\frequire\0", "config", "wpm.nvim")
+time([[Config for wpm.nvim]], false)
 -- Config for: nvim-terminal
 time([[Config for nvim-terminal]], true)
 try_loadstring("\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0", "config", "nvim-terminal")

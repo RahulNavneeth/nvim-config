@@ -8,9 +8,6 @@ require("mason").setup({
             }
       }
 })
--- require("mason-lspconfig").setup({
---       ensure_installed = {"lua_ls"}
--- })
 
 local on_attach = function(_, _)
       vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
@@ -34,10 +31,6 @@ lspconfig.gopls.setup {
     debounce_text_changes = 150,
   },
 }
-
--- lspconfig.sumneko_lua.setup {
---   on_attach = on_attach,
--- }
 
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,

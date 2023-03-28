@@ -1,17 +1,12 @@
--- examples for your init.lua
-
--- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
--- empty setup using defaults
 require("nvim-tree").setup()
 
 vim.keymap.set("n", "<leader>mn", require("nvim-tree.api").marks.navigate.next)
 vim.keymap.set("n", "<leader>mp", require("nvim-tree.api").marks.navigate.prev)
 vim.keymap.set("n", "<leader>ms", require("nvim-tree.api").marks.navigate.select)
-    require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
+    require("nvim-tree").setup {
       auto_reload_on_write = true,
       disable_netrw = false,
       hijack_cursor = false,
@@ -235,7 +230,7 @@ vim.keymap.set("n", "<leader>ms", require("nvim-tree.api").marks.navigate.select
           watcher = false,
         },
       },
-    } -- END_DEFAULT_OPTS
+    }
 
 
 

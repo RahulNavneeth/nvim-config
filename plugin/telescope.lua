@@ -13,7 +13,7 @@ require("telescope").setup({
     defaults = {
         mappings = {
             i = {
-                ["<esc>"] = actions.close,
+                -- MAPPINGS
             },
         },
         file_ignore_patterns = {"node_modules"},

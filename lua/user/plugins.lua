@@ -13,15 +13,16 @@ if not ok then return end
 
 return packer.startup {
 	function()
-		use {
-		  'VonHeikemen/fine-cmdline.nvim',
-		  requires = {
-		    {'MunifTanjim/nui.nvim'}
-		  }
-		}
+		use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
+		use 'prisma/vim-prisma'
+		use { 'yardnsm/vim-import-cost',  run = ':ImportCost'}
+		use 'rhysd/vim-grammarous'
+		use 'nanozuki/tabby.nvim'
+		use { "catppuccin/nvim", as = "catppuccin" }
+		use 'ThePrimeagen/vim-be-good'
+		use 'ThePrimeagen/harpoon'
 		use 'nvim-telescope/telescope-media-files.nvim'
 		use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
-		use 'xiyaowong/nvim-transparent'
 		use 'preservim/tagbar'
 		use 'sudoerwx/vim-ray-so-beautiful'
 		use 'github/copilot.vim'
@@ -40,24 +41,18 @@ return packer.startup {
 		use 'ap/vim-css-color'
 		use {
 		  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
 		  requires = { {'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'} }
 		}
 		use 'BurntSushi/ripgrep'
 		use 'sharkdp/fd'
-		use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
+		use 'feline-nvim/feline.nvim'
 		use 'wbthomason/packer.nvim'
 		use 'David-Kunz/markid'
 		use 'Raimondi/delimitMate'
 		use 'edluffy/hologram.nvim'
-		-- use 'airblade/vim-gitgutter'
 		use 'neoclide/coc-git'
 		use 'tpope/vim-fugitive'
 		use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-		-- use 'MaskRay/ccls'
-		-- use 'vim-airline/vim-airline'
-		-- use 'vim-airline/vim-airline-themes'
-		-- use 'jeaye/color_coded'
 		use {
 		    'numToStr/Comment.nvim',
 		    config = function()
@@ -65,17 +60,10 @@ return packer.startup {
 		    end
 		}
 		use  'hrsh7th/nvim-cmp'
-		-- use {
-		-- 		"windwp/nvim-autopairs",
-  --   		config = function() require("nvim-autopairs").setup {} end
-		-- 		}
 		use 'mhartington/formatter.nvim'
 		use 'andweeb/presence.nvim'
 		use 'nvim-treesitter/nvim-treesitter'
 		use {'prettier/vim-prettier' , run = "yarn install"}
-		
-		
-
   	use 'morhetz/gruvbox'
 		use {
 		    "jcdickinson/wpm.nvim",
@@ -84,14 +72,9 @@ return packer.startup {
 		        })
 		    end
 		}
-    -- use 'bling/vim-bufferline'
     use 'sheerun/vim-polyglot'
-
 		use 'ctrlpvim/ctrlp.vim'
 		use 'HerringtonDarkholme/yats.vim'
-
-  	--use 'gruvbox-community/gruvbox'
-  	-- use 'sainnhe/gruvbox-material'
 	  use {
 	      'nvim-tree/nvim-tree.lua',
 	      requires = {
